@@ -4,6 +4,7 @@ import React from 'react';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { useRouter } from 'next/navigation';
 
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface PageProps {
 
 }

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import ConversationList from '../ui/conversation-list';
 
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface SidebarProps {
 
 }
