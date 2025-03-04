@@ -1,25 +1,27 @@
 
 declare global {
+    interface Messages {
+        msg_id: string;
+        sender_id: string;
+        content: string;
+        timestamp: string;
+    }
+
     interface Conversation {
-        _id: number;
+        _id: string;
         participants: {
             sender: {
-                _id: number;
+                _id: string;
                 fullname: string;
                 email: string;
             };
             receiver: {
-                _id: number;
+                _id: string;
                 fullname: string;
                 email: string;
             }
         }
-        messages: {
-            msg_id: number;
-            sender_id: number;
-            content: string;
-            timestamp: string;
-        }[]
+        messages: Messages[]
     }
 }
 
