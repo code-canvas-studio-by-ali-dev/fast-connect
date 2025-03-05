@@ -5,7 +5,6 @@ import { type NextPage } from 'next';
 // Define the params as potentially a Promise
 interface PageProps {
     params: Promise<{ conversation: string }>; // Changed to Promise
-    searchParams: { [key: string]: string | string[] | undefined };
 }
 
 // Use NextPage with async function
