@@ -13,7 +13,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <aside className='hidden lg:block w-1/4 min-h-0'>
                     <SidebarChat />
                 </aside>
-                <main>
+                <main className='flex flex-col lg:w-3/4 gap-2 h-full'>
                     {children}
                 </main>
             </div>

@@ -1,16 +1,17 @@
 import HeaderChat from '@/components/header/header.chat';
 import ChatScreenChat from '@/components/screens/chatScreen.chat';
-import React from 'react';
+import { type NextPage } from 'next';
 
-interface pageProps {
+// Define the props type properly
+interface PageProps {
     params: {
-        conversation: string
-    }
+        conversation: string;
+    };
+    searchParams: { [key: string]: string | string[] | undefined };
 }
 
-const page: React.FC<pageProps> = ({ params }) => {
-
-    const { conversation } = params
+const Page: NextPage<PageProps> = ({ params }) => {
+    const { conversation } = params;
 
     return (
         <>
@@ -20,4 +21,4 @@ const page: React.FC<pageProps> = ({ params }) => {
     );
 };
 
-export default page;
+export default Page;

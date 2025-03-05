@@ -8,7 +8,7 @@ interface SidebarProps {
 
 const SidebarChat: React.FC<SidebarProps> = ({ className }) => {
     return (
-        <nav className={`flex flex-col space-y-2 h-screen ${className}`}>
+        <nav className={`flex flex-col space-y-2 h-screen lg:h-full ${className}`}>
             <BrandingChat />
             <div className='flex flex-col bg-base-200 rounded-md py-3 w-full h-full space-y-4 overflow-hidden'>
                 <h3 role='tablist' className='tabs tabs-xs p-2'>
