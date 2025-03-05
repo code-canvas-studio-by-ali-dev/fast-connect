@@ -2,16 +2,16 @@ import HeaderChat from '@/components/header/header.chat';
 import ChatScreenChat from '@/components/screens/chatScreen.chat';
 import { type NextPage } from 'next';
 
-// Define the props type properly
+// Define the params as potentially a Promise
 interface PageProps {
-    params: {
-        conversation: string;
-    };
+    params: Promise<{ conversation: string }>; // Changed to Promise
     searchParams: { [key: string]: string | string[] | undefined };
 }
 
-const Page: NextPage<PageProps> = ({ params }) => {
-    const { conversation } = params;
+// Use NextPage with async function
+const Page: NextPage<PageProps> = async ({ params }) => {
+    // Await the params since it's a Promise
+    const { conversation } = await params;
 
     return (
         <>
