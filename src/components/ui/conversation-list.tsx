@@ -12,12 +12,12 @@ interface ConversationListProps {
 const ConversationList: React.FC<ConversationListProps> = ({ }) => {
     const navigate = useRouter()
 
-    const handleClick = (id: number) => {
+    const handleClick = (id: string) => {
         navigate.push(`/chat-application/${id}`)
     }
-    
+
     return (
-        <ul className='text-sm space-y-2 flex-1 min-h-0 overflow-y-auto scrollbar-thin scrollbar-thumb-rounded-full scrollbar-thumb-base-100 hover:scrollbar-thumb-base-300 scrollbar-track-transparent p-3'>
+        <ul className='flex-1 min-h-0 text-sm space-y-2 p-3 overflow-y-auto scrollbar-thin scrollbar-thumb-rounded-full scrollbar-thumb-base-100 hover:scrollbar-thumb-base-300 scrollbar-track-transparent'>
             {conversation_dummy_data.map((conversation: Conversation) => (
                 <li className='list-wrap' key={conversation._id} onClick={() => handleClick(conversation._id)}>
                     <div className='list-wrap-child'>

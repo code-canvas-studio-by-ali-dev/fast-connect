@@ -18,7 +18,7 @@ const ChatBubbles: React.FC<ChatBubblesProps> = ({ message, conversation }) => {
                 {message.sender_id == conversationDetail?.participants.receiver._id ? 'You' : conversationDetail?.participants?.sender?.fullname}
                 <time className="text-xs opacity-50">12:45</time>
             </div>
-            <div className="chat-bubble bg-base-200">{message.content}</div>
+            <div className="chat-bubble bg-base-200 text-sm">{message.content}</div>
             <div className="chat-footer opacity-50">Delivered</div>
         </div>
     );

@@ -53,5 +53,9 @@
 
   .list-active {
     @apply bg-base-300;
-  }
+  } 
+}
+
+.caret-none {
+  caret-color: transparent;
 }
